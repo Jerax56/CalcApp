@@ -43,6 +43,9 @@ public class Main {
             }
 
         }
+        if (a==0||b==0) {
+            throw new ArithmeticException();
+        }
         if ((!firstRim ||!twoRim)&&(!firstArab ||!twoArab) && ((firstRim=twoRim)||(firstArab=twoArab))){
             throw new ArithmeticException();
         }
@@ -108,9 +111,9 @@ public class Main {
                         line ="L";
                     }
                     if (c%10!=0) {
-line+=rim[c%10];
+                        line+=rim[c%10];
                     }
-return line;
+                    return line;
                 }
             }
 
